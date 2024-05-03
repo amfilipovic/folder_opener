@@ -37,21 +37,21 @@ The Folder Opener is a C program designed to open folders specified in a text fi
   - Stores messages in a global `messages` array.
   - Returns 0 if all messages are loaded, otherwise returns 1.
 
-#### `folder_exists`
+### `folder_exists`
 
 - **Purpose:** Check if a specified folder exists.
 - **Logic:**
   - Uses `stat` to retrieve file information.
   - Returns true if the path exists and is a directory.
 
-#### `sanitize_input`
+### `sanitize_input`
 
 - **Purpose:** Validates the input to prevent command injection.
 - **Logic:**
   - Checks for special characters (`&`, `?`, `*`, etc.) in the input.
   - Returns true if any unsafe character is found.
 
-#### `open_folder`
+### `open_folder`
 
 - **Purpose:** Open the specified folder.
 - **Logic:**
@@ -63,7 +63,7 @@ The Folder Opener is a C program designed to open folders specified in a text fi
     - Linux: Uses `xdg-open`.
   - Prints appropriate error messages using loaded language strings.
 
-#### `main`
+### `main`
 
 - **Purpose:** Entry point of the program.
 - **Logic:**
@@ -75,7 +75,7 @@ The Folder Opener is a C program designed to open folders specified in a text fi
   - Opens each folder by calling `open_folder`.
   - Frees allocated message memory.
 
-#### Compilation
+## Compilation
 
 Compile the code using a C compiler. Example for GCC:
 
@@ -83,7 +83,7 @@ Compile the code using a C compiler. Example for GCC:
 gcc -o folder_opener folder_opener.c
 ```
 
-#### Usage
+## Usage
 
 Run the program specifying the language:
 
